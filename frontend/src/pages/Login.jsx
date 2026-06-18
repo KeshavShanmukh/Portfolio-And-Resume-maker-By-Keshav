@@ -21,7 +21,12 @@ export default function Login() {
     <div className="auth-root">
       <div className="auth-card">
         <div className="auth-head">
-          <div className="logo-mark">PM</div>
+          <div className="logo-mark">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" fill="#fff" opacity="0.06"/>
+              <path d="M6 12h12M6 8h12M6 16h12" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+            </svg>
+          </div>
           <div>
             <div className="auth-title">Welcome back</div>
             <div className="auth-sub">Sign in to manage your portfolio</div>
@@ -40,7 +45,7 @@ export default function Login() {
 
           <div className="form-actions">
             <div>
-              <button className="btn btn-primary" type="submit">Sign in</button>
+              <button className="btn btn-primary" type="submit"><span className="icon">🔒</span>Sign in</button>
             </div>
             <div style={{textAlign:'right'}}>
               <a className="secondary-link" href="/register">Create account</a>

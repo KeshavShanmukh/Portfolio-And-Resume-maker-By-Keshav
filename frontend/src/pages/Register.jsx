@@ -23,7 +23,12 @@ export default function Register() {
     <div className="auth-root">
       <div className="auth-card">
         <div className="auth-head">
-          <div className="logo-mark">PM</div>
+          <div className="logo-mark">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" fill="#fff" opacity="0.06"/>
+              <path d="M7 12l3 3 7-9" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+            </svg>
+          </div>
           <div>
             <div className="auth-title">Create account</div>
             <div className="auth-sub">Start building your professional portfolio</div>
@@ -46,7 +51,7 @@ export default function Register() {
 
           <div className="form-actions">
             <div>
-              <button className="btn btn-primary" type="submit">Create account</button>
+              <button className="btn btn-primary" type="submit"><span className="icon">✨</span>Create account</button>
             </div>
             <div style={{textAlign:'right'}}>
               <a className="secondary-link" href="/login">Already have an account?</a>

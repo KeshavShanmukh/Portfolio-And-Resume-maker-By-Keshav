@@ -84,4 +84,31 @@ header.app-header{
 	.logo-mark{width:36px;height:36px}
 }
 
+/* Animations */
+@keyframes floatUp {
+	from { transform: translateY(8px); opacity: 0 }
+	to { transform: translateY(0); opacity: 1 }
+}
+@keyframes pulse {
+	0% { transform: scale(1) }
+	50% { transform: scale(1.02) }
+	100% { transform: scale(1) }
+}
+
+.fade-in{animation:floatUp .45s ease both}
+.pulse-slow{animation:pulse 3s ease infinite}
+
+/* Hero banner */
+.hero{display:flex;gap:1.5rem;align-items:center;background:linear-gradient(90deg,rgba(255,255,255,0.6),rgba(250,250,255,0.7));padding:1.5rem;border-radius:12px;margin-bottom:1rem;box-shadow:0 12px 40px rgba(2,6,23,0.06)}
+.hero .content{flex:1}
+.hero h1{margin:0;font-size:1.6rem}
+.hero p{margin:6px 0 0;color:var(--muted)}
+.hero .art{width:220px;height:140px;flex:0 0 220px}
+
+/* Buttons with icon */
+.btn .icon{display:inline-block;margin-right:8px;vertical-align:middle;opacity:0.95}
+
+/* small toast */
+.toast{position:fixed;right:20px;bottom:20px;background:linear-gradient(90deg,var(--accent),var(--accent-600));color:white;padding:10px 14px;border-radius:8px;box-shadow:0 10px 30px rgba(37,99,235,0.14)}
+
 
