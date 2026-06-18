@@ -1,6 +1,6 @@
-# Portfolio Maker — Day 1
+# Portfolio Maker
 
-This repository contains the Day 1 setup for the Portfolio Maker + Resume Builder platform.
+This repository contains the setup for the Portfolio Maker + Resume Builder platform.
 
 Developer quick start
 

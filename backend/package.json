@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Contains the Express backend and Prisma schema for Day 1.",
+  "description": "Contains the Express backend and Prisma schema for the project.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

@@ -1,3 +1,3 @@
 # Backend
 
-Contains the Express backend and Prisma schema for Day 1.
+Contains the Express backend and Prisma schema for the project.

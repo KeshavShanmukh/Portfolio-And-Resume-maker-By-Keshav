@@ -1,6 +1,6 @@
 # Developer Quick Walkthrough (Windows PowerShell)
 
-This file walks through the exact steps to run and verify the Day 1 stack locally on Windows.
+This file walks through the exact steps to run and verify the project stack locally on Windows.
 
 1) Backend — install, configure, run
 
@@ -53,7 +53,7 @@ Security note about plaintext passwords
 
 5) Git
 
-- Branch with Day 1 work: `day1-setup` (local). To push to GitHub:
+- Branch with work: `day1-setup` (local). To push to GitHub:
 
 ```powershell
 # add remote then push
@@ -68,7 +68,7 @@ If you want I can push to a repo you provide.
 - Email: `tester_js@example.com`
 - Password: `password123`
 
-These credentials are created for Day 1 testing and the password is bcrypt-hashed in the local SQLite DB. Use them to login via the frontend or with the test scripts in `backend/`.
+These credentials are created for testing and the password is bcrypt-hashed in the local SQLite DB. Use them to login via the frontend or with the test scripts in `backend/`.
 
 7) Portfolio persistence
 

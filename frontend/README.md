@@ -1,3 +1,3 @@
 # Frontend
 
-Contains the React + Vite frontend for Day 1.
+Contains the React + Vite frontend for the project.
