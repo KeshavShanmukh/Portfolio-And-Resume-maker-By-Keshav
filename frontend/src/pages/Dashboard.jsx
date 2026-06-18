@@ -50,20 +50,7 @@ export default function Dashboard() {
           <p>Use the editor to craft your bio, skills, and links. Save to your account and preview in real-time.</p>
         </div>
         <div className="art" aria-hidden>
-          <svg viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
-            <rect x="0" y="0" width="220" height="140" rx="12" fill="url(#g)" />
-            <defs>
-              <linearGradient id="g" x1="0" x2="1">
-                <stop offset="0" stopColor="#A78BFA" />
-                <stop offset="1" stopColor="#60A5FA" />
-              </linearGradient>
-            </defs>
-            <g opacity="0.14">
-              <circle cx="40" cy="40" r="28" fill="#fff" />
-              <circle cx="150" cy="90" r="36" fill="#fff" />
-            </g>
-            <path d="M24 110 C60 40,160 20,200 80" stroke="#fff" stroke-opacity="0.4" stroke-width="6" fill="none" stroke-linecap="round" />
-          </svg>
+          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_tfb3estd.json" background="transparent" speed="1" style={{width:'220px',height:'140px'}} loop autoplay></lottie-player>
         </div>
       </div>
 
