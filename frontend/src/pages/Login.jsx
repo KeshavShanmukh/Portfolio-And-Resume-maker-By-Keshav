@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
 export default function Login() {
   const [form, setForm] = useState({ email: '', password: '' })
   const [msg, setMsg] = useState('')
@@ -19,14 +18,38 @@ export default function Login() {
   }
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded shadow">
-      <h2 className="text-xl mb-4">Login</h2>
-      <form onSubmit={submit} className="space-y-3">
-        <input className="w-full p-2 border" placeholder="Email" value={form.email} onChange={e=>setForm({...form, email: e.target.value})} />
-        <input className="w-full p-2 border" type="password" placeholder="Password" value={form.password} onChange={e=>setForm({...form, password: e.target.value})} />
-        <button className="px-4 py-2 bg-blue-600 text-white rounded" type="submit">Login</button>
-      </form>
-      {msg && <p className="mt-3">{msg}</p>}
+    <div className="auth-root">
+      <div className="auth-card">
+        <div className="auth-head">
+          <div className="logo-mark">PM</div>
+          <div>
+            <div className="auth-title">Welcome back</div>
+            <div className="auth-sub">Sign in to manage your portfolio</div>
+          </div>
+        </div>
+
+        <form onSubmit={submit}>
+          <div className="form-field">
+            <label>Email</label>
+            <input value={form.email} onChange={e=>setForm({...form, email: e.target.value})} placeholder="you@company.com" />
+          </div>
+          <div className="form-field">
+            <label>Password</label>
+            <input type="password" value={form.password} onChange={e=>setForm({...form, password: e.target.value})} placeholder="Your secure password" />
+          </div>
+
+          <div className="form-actions">
+            <div>
+              <button className="btn btn-primary" type="submit">Sign in</button>
+            </div>
+            <div style={{textAlign:'right'}}>
+              <a className="secondary-link" href="/register">Create account</a>
+            </div>
+          </div>
+        </form>
+
+        {msg && <p className="small" style={{marginTop:12}}>{msg}</p>}
+      </div>
     </div>
   )
 }
