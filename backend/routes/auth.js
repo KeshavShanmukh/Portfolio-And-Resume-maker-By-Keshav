@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { PrismaClient } = require('@prisma/client');
+const fs = require('fs');
 
 const prisma = new PrismaClient();
 
@@ -33,10 +34,23 @@ router.post('/login', async (req, res) => {
   if (!email || !password) return res.status(400).json({ error: 'Missing fields' });
   try {
     const user = await prisma.user.findUnique({ where: { email } });
+    try {
+      fs.appendFileSync('auth-debug.log', `[${new Date().toISOString()}] Login attempt for: ${email} userFound: ${!!user}\n`);
+      if (user) fs.appendFileSync('auth-debug.log', `storedPasswordLength: ${user.password ? user.password.length : 'none'}\n`);
+    } catch (e) {
+      console.error('Failed to write auth-debug.log', e);
+    }
     if (!user) return res.status(400).json({ error: 'Invalid credentials' });
 
     const storePlain = process.env.PLAINTEXT_PASSWORDS === 'true';
-    const ok = storePlain ? (password === user.password) : await bcrypt.compare(password, user.password);
+    let ok = false;
+    if (storePlain) {
+      ok = (password === user.password);
+      try{ fs.appendFileSync('auth-debug.log', `plaintextCompare:${ok}\n`) }catch(e){}
+    } else {
+      ok = await bcrypt.compare(password, user.password);
+      try{ fs.appendFileSync('auth-debug.log', `bcryptCompare:${ok}\n`) }catch(e){}
+    }
     if (!ok) return res.status(400).json({ error: 'Invalid credentials' });
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '7d' });

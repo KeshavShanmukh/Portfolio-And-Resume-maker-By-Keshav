@@ -8,9 +8,14 @@ export default function Dashboard() {
 
   useEffect(()=>{
     const token = localStorage.getItem('token')
-    axios.get('http://localhost:4000/api/dashboard', { headers: { Authorization: `Bearer ${token}` } })
-      .then(res => setData(res.data))
-      .catch(err => setData({ error: err.response?.data?.error || 'Error' }))
+    (async ()=>{
+      try{
+        const res = await axios.get('http://localhost:4000/api/dashboard', { headers: { Authorization: `Bearer ${token}` } })
+        setData(res.data)
+      }catch(err){
+        setData({ error: err.response?.data?.error || 'Error' })
+      }
+    })()
     // load portfolio from backend if authenticated
     (async ()=>{
       try{

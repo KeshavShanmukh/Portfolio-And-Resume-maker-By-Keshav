@@ -7,10 +7,39 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
 model User {
   id        Int      @id @default(autoincrement())
   username  String
   email     String   @unique
   password  String
   createdAt DateTime @default(now())
+  portfolios Portfolio[]
+}
+model Portfolio {
+  id          Int                 @id @default(autoincrement())
+  user        User                @relation(fields: [userId], references: [id])
+  userId      Int
+  title       String
+  description String?
+  builderType String              @default("DRAG_DROP")
+  meta        String?
+  codeHtml    String?
+  codeCss     String?
+  codeJs      String?
+  theme       String?             @default("default")
+  isPublished Boolean             @default(false)
+  sections    PortfolioSection[]
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+}
+
+model PortfolioSection {
+  id          Int       @id @default(autoincrement())
+  portfolio   Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+  portfolioId Int
+  type        String
+  position    Int
+  content     String
+  createdAt   DateTime  @default(now())
 }

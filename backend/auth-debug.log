@@ -1,0 +1,44 @@
+[2026-06-18T14:48:11.448Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:false
+[2026-06-18T14:48:13.117Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:false
+[2026-06-18T14:48:28.652Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:false
+[2026-06-18T15:20:09.172Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-18T15:26:51.838Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-18T15:27:37.632Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-19T14:40:27.496Z] Login attempt for: madhavipulikonda17@gmail.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-19T14:56:36.263Z] Login attempt for:  tester_js@example.com userFound: false
+[2026-06-19T14:56:38.010Z] Login attempt for:  tester_js@example.com userFound: false
+[2026-06-19T14:56:43.786Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-19T14:57:01.257Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-19T14:57:19.790Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-19T14:59:01.892Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-19T15:04:26.495Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-19T15:04:37.867Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-19T15:05:14.537Z] Login attempt for: tester_js@example.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
