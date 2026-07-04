@@ -1,0 +1,105 @@
+{
+  "id": "creative",
+  "name": "Creative Resume",
+  "description": "Visual and design-oriented layout",
+  "category": "resume",
+  "layout": "creative",
+  "theme": {
+    "primaryColor": "#ec4899",
+    "secondaryColor": "#db2777",
+    "backgroundColor": "#fdf2f8",
+    "textColor": "#1f2937",
+    "font": "Poppins, sans-serif"
+  },
+  "sections": [
+    {
+      "type": "contact",
+      "position": 1,
+      "content": {
+        "name": "Taylor Creative",
+        "email": "taylor@design.studio",
+        "phone": "(555) 567-8901",
+        "location": "Los Angeles, CA",
+        "linkedin": "linkedin.com/in/taylorcreative",
+        "github": "",
+        "portfolio": "taylorcreative.design"
+      }
+    },
+    {
+      "type": "summary",
+      "position": 2,
+      "content": {
+        "text": "Award-winning designer with 7 years of experience creating memorable brand identities and digital experiences. Passionate about blending art with technology."
+      }
+    },
+    {
+      "type": "skills",
+      "position": 3,
+      "content": {
+        "skills": ["UI/UX Design", "Brand Identity", "Adobe Creative Suite", "Figma", "Sketch", "Motion Design", "Typography", "Color Theory", "Web Design", "Prototyping"]
+      }
+    },
+    {
+      "type": "experience",
+      "position": 4,
+      "content": {
+        "items": [
+          {
+            "company": "Design Agency",
+            "role": "Senior Designer",
+            "duration": "2020 - Present",
+            "description": "Lead designer for Fortune 500 clients. Won 3 design awards. Managed team of 5 designers."
+          },
+          {
+            "company": "Creative Studio",
+            "role": "UI/UX Designer",
+            "duration": "2017 - 2020",
+            "description": "Designed user interfaces for mobile and web applications. Improved user engagement by 45%."
+          }
+        ]
+      }
+    },
+    {
+      "type": "projects",
+      "position": 5,
+      "content": {
+        "items": [
+          {
+            "name": "Brand Redesign",
+            "description": "Complete brand identity redesign for tech startup, resulting in 200% increase in brand recognition"
+          },
+          {
+            "name": "Mobile App Design",
+            "description": "Designed award-winning mobile application featured in App Store"
+          }
+        ]
+      }
+    },
+    {
+      "type": "education",
+      "position": 6,
+      "content": {
+        "items": [
+          {
+            "institution": "Rhode Island School of Design",
+            "degree": "Bachelor of Fine Arts in Graphic Design",
+            "year": "2013 - 2017"
+          }
+        ]
+      }
+    },
+    {
+      "type": "certifications",
+      "position": 7,
+      "content": {
+        "items": [
+          {
+            "name": "Google UX Design Certificate",
+            "issuer": "Google",
+            "date": "2021"
+          }
+        ]
+      }
+    }
+  ]
+}

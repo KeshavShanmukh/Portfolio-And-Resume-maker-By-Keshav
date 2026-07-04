@@ -1,0 +1,82 @@
+{
+  "id": "modern",
+  "name": "Modern Resume",
+  "description": "Clean and modern styling",
+  "category": "resume",
+  "layout": "two-column",
+  "theme": {
+    "primaryColor": "#2563eb",
+    "secondaryColor": "#1d4ed8",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "font": "Inter, sans-serif"
+  },
+  "sections": [
+    {
+      "type": "contact",
+      "position": 1,
+      "content": {
+        "name": "Jane Smith",
+        "email": "jane.smith@email.com",
+        "phone": "(555) 987-6543",
+        "location": "San Francisco, CA",
+        "linkedin": "linkedin.com/in/janesmith",
+        "github": "github.com/janesmith"
+      }
+    },
+    {
+      "type": "summary",
+      "position": 2,
+      "content": {
+        "text": "Creative software developer with a passion for building intuitive user experiences. Skilled in modern web technologies and agile methodologies."
+      }
+    },
+    {
+      "type": "skills",
+      "position": 3,
+      "content": {
+        "skills": ["React", "Vue.js", "TypeScript", "Node.js", "MongoDB", "Figma", "UI/UX Design", "GraphQL", "Docker", "CI/CD"]
+      }
+    },
+    {
+      "type": "experience",
+      "position": 4,
+      "content": {
+        "items": [
+          {
+            "company": "Creative Tech Studio",
+            "role": "Full Stack Developer",
+            "duration": "2020 - Present",
+            "description": "Built responsive web applications and improved user engagement by 60%. Implemented design systems and component libraries."
+          }
+        ]
+      }
+    },
+    {
+      "type": "projects",
+      "position": 5,
+      "content": {
+        "items": [
+          {
+            "name": "Task Management App",
+            "description": "Built a collaborative task management tool with real-time updates",
+            "technologies": "React, Node.js, Socket.io"
+          }
+        ]
+      }
+    },
+    {
+      "type": "education",
+      "position": 6,
+      "content": {
+        "items": [
+          {
+            "institution": "Design Institute",
+            "degree": "Bachelor of Design in Interaction Design",
+            "year": "2016 - 2020"
+          }
+        ]
+      }
+    }
+  ]
+}

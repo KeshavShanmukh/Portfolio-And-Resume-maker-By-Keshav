@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import TemplateChooser from '../components/TemplateChooser'
+import { API_BASE_URL } from '../api/config'
 
 export default function MyPortfolios(){
   const [list, setList] = useState([])
+  const [choosing, setChoosing] = useState(false)
+  const [showTemplateChooser, setShowTemplateChooser] = useState(false)
   const nav = useNavigate()
   const token = localStorage.getItem('token')
 
   const load = async ()=>{
     try{
-      const res = await axios.get('http://localhost:4000/api/portfolio', { headers: { Authorization: `Bearer ${token}` } })
+      const res = await axios.get(`${API_BASE_URL}/api/portfolio`, { headers: { Authorization: `Bearer ${token}` } })
       setList(res.data || [])
     }catch(e){
       console.error(e)
@@ -18,11 +22,10 @@ export default function MyPortfolios(){
 
   useEffect(()=>{ load() },[])
 
-  const [choosing, setChoosing] = useState(false)
   const create = async (method)=>{
     try{
       const payload = { title: 'Untitled Portfolio', builderType: method }
-      const res = await axios.post('http://localhost:4000/api/portfolio/create', payload, { headers: { Authorization: `Bearer ${token}` } })
+      const res = await axios.post(`${API_BASE_URL}/api/portfolio/create`, payload, { headers: { Authorization: `Bearer ${token}` } })
       setChoosing(false)
       if(method==='FORM') nav(`/dashboard/portfolio/${res.data.id}/form`)
       else if(method==='CODE') nav(`/dashboard/portfolio/${res.data.id}/code`)
@@ -33,9 +36,38 @@ export default function MyPortfolios(){
   const remove = async (id)=>{
     if(!confirm('Delete this portfolio?')) return
     try{
-      await axios.delete(`http://localhost:4000/api/portfolio/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+      await axios.delete(`${API_BASE_URL}/api/portfolio/${id}`, { headers: { Authorization: `Bearer ${token}` } })
       load()
     }catch(e){ console.error(e) }
+  }
+
+  const applyTemplate = async (template) => {
+    if(!template) return
+    try{
+      const payload = {
+        title: `${template.name} Portfolio`,
+        builderType: 'DRAG_DROP',
+        theme: JSON.stringify(template.theme),
+        meta: JSON.stringify({ templateId: template.id })
+      }
+      const res = await axios.post(`${API_BASE_URL}/api/portfolio/create`, payload, { headers: { Authorization: `Bearer ${token}` } })
+      const portfolioId = res.data.id
+      for(const section of template.sections){
+        await axios.post(`${API_BASE_URL}/api/portfolio/section`, {
+          portfolioId,
+          type: section.type,
+          content: section.content,
+          position: section.position
+        }, { headers: { Authorization: `Bearer ${token}` } })
+      }
+      setChoosing(false)
+      setShowTemplateChooser(false)
+      alert('Portfolio created from template!')
+      nav(`/dashboard/portfolio/${portfolioId}`)
+    }catch(e){
+      console.error(e)
+      alert('Unable to create portfolio from template.')
+    }
   }
 
   return (
@@ -53,10 +85,19 @@ export default function MyPortfolios(){
       <div style={{marginTop:16}} className="card">
         <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
           <h3 style={{margin:0}}>My Portfolios</h3>
-          <div>
-            <button onClick={()=>setChoosing(v=>!v)} className="btn">Create Portfolio</button>
+          <div style={{display:'flex',gap:8}}>
+            <button onClick={() => { setShowTemplateChooser(v=>!v); setChoosing(false) }} className="btn btn-secondary">Create from Template</button>
+            <button onClick={() => { setChoosing(v=>!v); setShowTemplateChooser(false) }} className="btn">Create Portfolio</button>
           </div>
         </div>
+
+        {showTemplateChooser && (
+          <TemplateChooser
+            type="portfolio"
+            onApply={applyTemplate}
+            onGalleryLink={()=>nav('/dashboard/templates')}
+          />
+        )}
 
         {choosing && (
           <div style={{marginTop:8,display:'flex',gap:8}}>

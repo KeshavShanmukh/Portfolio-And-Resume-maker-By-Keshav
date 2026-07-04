@@ -1,0 +1,92 @@
+{
+  "id": "software-engineer",
+  "name": "Software Engineer Resume",
+  "description": "Technical skills and projects focus",
+  "category": "resume",
+  "layout": "two-column",
+  "theme": {
+    "primaryColor": "#059669",
+    "secondaryColor": "#047857",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "font": "Courier New, monospace"
+  },
+  "sections": [
+    {
+      "type": "contact",
+      "position": 1,
+      "content": {
+        "name": "Alex Engineer",
+        "email": "alex@engineer.com",
+        "phone": "(555) 456-7890",
+        "location": "Seattle, WA",
+        "linkedin": "linkedin.com/in/alexengineer",
+        "github": "github.com/alexengineer"
+      }
+    },
+    {
+      "type": "summary",
+      "position": 2,
+      "content": {
+        "text": "Software engineer specializing in backend development and system architecture. Experienced with high-scale distributed systems and cloud infrastructure."
+      }
+    },
+    {
+      "type": "skills",
+      "position": 3,
+      "content": {
+        "skills": ["Java", "Go", "Python", "Kubernetes", "AWS", "PostgreSQL", "Redis", "Kafka", "System Design", "Algorithms"]
+      }
+    },
+    {
+      "type": "projects",
+      "position": 4,
+      "content": {
+        "items": [
+          {
+            "name": "Distributed Cache System",
+            "description": "Built a distributed caching layer handling 10K+ requests/sec with 99.9% uptime",
+            "technologies": "Go, Redis, Kubernetes"
+          },
+          {
+            "name": "API Gateway",
+            "description": "Developed a scalable API gateway with rate limiting and authentication",
+            "technologies": "Java, Spring Boot, AWS Lambda"
+          }
+        ]
+      }
+    },
+    {
+      "type": "experience",
+      "position": 5,
+      "content": {
+        "items": [
+          {
+            "company": "CloudScale Technologies",
+            "role": "Backend Engineer",
+            "duration": "2019 - Present",
+            "description": "Designed and implemented microservices architecture. Reduced latency by 50% through optimization."
+          }
+        ]
+      }
+    },
+    {
+      "type": "education",
+      "position": 6,
+      "content": {
+        "items": [
+          {
+            "institution": "MIT",
+            "degree": "Master of Science in Computer Science",
+            "year": "2017 - 2019"
+          },
+          {
+            "institution": "State University",
+            "degree": "Bachelor of Science in Computer Engineering",
+            "year": "2013 - 2017"
+          }
+        ]
+      }
+    }
+  ]
+}

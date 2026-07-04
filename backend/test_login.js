@@ -4,7 +4,7 @@ const fetch = globalThis.fetch || require('node-fetch');
     const res = await fetch('http://localhost:4000/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: 'tester_js@example.com', password: 'password123' })
+      body: JSON.stringify({ email: 'demo@portfoliomaker.com', password: 'demo123' })
     });
     const text = await res.text();
     console.log('STATUS', res.status);

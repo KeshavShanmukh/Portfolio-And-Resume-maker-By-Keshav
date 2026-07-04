@@ -1,0 +1,75 @@
+{
+  "id": "ats",
+  "name": "ATS Resume",
+  "description": "ATS-friendly single column layout",
+  "category": "resume",
+  "layout": "single-column",
+  "theme": {
+    "primaryColor": "#000000",
+    "secondaryColor": "#333333",
+    "backgroundColor": "#ffffff",
+    "textColor": "#000000",
+    "font": "Times New Roman, serif"
+  },
+  "sections": [
+    {
+      "type": "contact",
+      "position": 1,
+      "content": {
+        "name": "John Doe",
+        "email": "john.doe@email.com",
+        "phone": "(555) 123-4567",
+        "location": "New York, NY",
+        "linkedin": "linkedin.com/in/johndoe",
+        "github": "github.com/johndoe"
+      }
+    },
+    {
+      "type": "summary",
+      "position": 2,
+      "content": {
+        "text": "Results-driven software engineer with 5 years of experience in full-stack development. Proven track record of delivering high-quality solutions and leading technical teams."
+      }
+    },
+    {
+      "type": "skills",
+      "position": 3,
+      "content": {
+        "skills": ["JavaScript", "React", "Node.js", "Python", "SQL", "AWS", "Git", "Agile", "REST APIs", "Microservices"]
+      }
+    },
+    {
+      "type": "experience",
+      "position": 4,
+      "content": {
+        "items": [
+          {
+            "company": "Tech Solutions Inc",
+            "role": "Senior Software Engineer",
+            "duration": "2021 - Present",
+            "description": "Led development of microservices architecture serving 1M+ users. Improved system performance by 40% through optimization."
+          },
+          {
+            "company": "Digital Innovations LLC",
+            "role": "Software Engineer",
+            "duration": "2018 - 2021",
+            "description": "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams."
+          }
+        ]
+      }
+    },
+    {
+      "type": "education",
+      "position": 5,
+      "content": {
+        "items": [
+          {
+            "institution": "University of Technology",
+            "degree": "Bachelor of Science in Computer Science",
+            "year": "2014 - 2018"
+          }
+        ]
+      }
+    }
+  ]
+}

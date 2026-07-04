@@ -1,0 +1,69 @@
+{
+  "id": "developer",
+  "name": "Developer Portfolio",
+  "description": "Perfect for software developers and engineers",
+  "category": "portfolio",
+  "layout": "standard",
+  "theme": {
+    "primaryColor": "#3b82f6",
+    "secondaryColor": "#1e40af",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "font": "Inter, sans-serif"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "position": 1,
+      "content": {
+        "name": "John Developer",
+        "role": "Full Stack Developer",
+        "tagline": "Building modern web applications with passion and precision",
+        "image": ""
+      }
+    },
+    {
+      "type": "about",
+      "position": 2,
+      "content": {
+        "description": "I'm a passionate full-stack developer with 5+ years of experience building web applications. I specialize in React, Node.js, and cloud technologies. I love solving complex problems and creating user-friendly solutions."
+      }
+    },
+    {
+      "type": "skills",
+      "position": 3,
+      "content": {
+        "skills": ["JavaScript", "React", "Node.js", "Python", "TypeScript", "PostgreSQL", "AWS", "Docker", "Git", "REST APIs"]
+      }
+    },
+    {
+      "type": "projects",
+      "position": 4,
+      "content": {
+        "title": "E-Commerce Platform",
+        "description": "Built a full-stack e-commerce platform with React and Node.js",
+        "github": "https://github.com/johndeveloper/ecommerce",
+        "live": "https://ecommerce-demo.com"
+      }
+    },
+    {
+      "type": "experience",
+      "position": 5,
+      "content": {
+        "company": "Tech Company Inc.",
+        "role": "Senior Developer",
+        "duration": "2021 - Present",
+        "description": "Leading development of enterprise applications"
+      }
+    },
+    {
+      "type": "contact",
+      "position": 6,
+      "content": {
+        "email": "john@example.com",
+        "linkedin": "https://linkedin.com/in/johndeveloper",
+        "github": "https://github.com/johndeveloper"
+      }
+    }
+  ]
+}

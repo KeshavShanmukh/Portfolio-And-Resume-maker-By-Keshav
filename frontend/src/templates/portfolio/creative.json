@@ -1,0 +1,62 @@
+{
+  "id": "creative",
+  "name": "Creative Portfolio",
+  "description": "Showcase your creative work with style",
+  "category": "portfolio",
+  "layout": "gallery",
+  "theme": {
+    "primaryColor": "#8b5cf6",
+    "secondaryColor": "#7c3aed",
+    "backgroundColor": "#faf5ff",
+    "textColor": "#1f2937",
+    "font": "Playfair Display, serif"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "position": 1,
+      "content": {
+        "name": "Alex Creative",
+        "role": "UI/UX Designer & Developer",
+        "tagline": "Creating beautiful digital experiences",
+        "image": ""
+      }
+    },
+    {
+      "type": "projects",
+      "position": 2,
+      "content": {
+        "title": "Mobile App Design",
+        "description": "Designed a modern mobile application for fitness tracking",
+        "github": "",
+        "live": "https://dribbble.com/alexcreative"
+      }
+    },
+    {
+      "type": "projects",
+      "position": 3,
+      "content": {
+        "title": "Brand Identity",
+        "description": "Created complete brand identity for a startup",
+        "github": "",
+        "live": "https://behance.net/alexcreative"
+      }
+    },
+    {
+      "type": "about",
+      "position": 4,
+      "content": {
+        "description": "I'm a creative designer and developer who loves blending aesthetics with functionality. With 3 years of experience, I've worked with startups and established brands to create memorable digital experiences."
+      }
+    },
+    {
+      "type": "contact",
+      "position": 5,
+      "content": {
+        "email": "alex@creative.com",
+        "linkedin": "https://linkedin.com/in/alexcreative",
+        "github": ""
+      }
+    }
+  ]
+}

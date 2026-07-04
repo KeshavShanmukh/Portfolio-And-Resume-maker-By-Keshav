@@ -1,0 +1,86 @@
+{
+  "id": "professional",
+  "name": "Professional Resume",
+  "description": "Experience and leadership focus",
+  "category": "resume",
+  "layout": "two-column",
+  "theme": {
+    "primaryColor": "#1e3a8a",
+    "secondaryColor": "#1e40af",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "font": "Georgia, serif"
+  },
+  "sections": [
+    {
+      "type": "contact",
+      "position": 1,
+      "content": {
+        "name": "Robert Professional",
+        "email": "robert@executive.com",
+        "phone": "(555) 345-6789",
+        "location": "Chicago, IL",
+        "linkedin": "linkedin.com/in/robertprofessional",
+        "github": ""
+      }
+    },
+    {
+      "type": "summary",
+      "position": 2,
+      "content": {
+        "text": "Executive leader with 15+ years of experience in technology management. Proven track record of building high-performing teams and delivering strategic initiatives."
+      }
+    },
+    {
+      "type": "experience",
+      "position": 3,
+      "content": {
+        "items": [
+          {
+            "company": "Fortune 500 Company",
+            "role": "VP of Engineering",
+            "duration": "2018 - Present",
+            "description": "Leading engineering organization of 200+ engineers. Oversaw $50M technology budget. Delivered digital transformation initiative saving $20M annually."
+          },
+          {
+            "company": "Innovation Corp",
+            "role": "Director of Technology",
+            "duration": "2014 - 2018",
+            "description": "Managed technology strategy and implementation. Led digital platform migration serving 10M customers."
+          },
+          {
+            "company": "Startup Ventures",
+            "role": "CTO",
+            "duration": "2010 - 2014",
+            "description": "Co-founded and led technology development. Grew company from 0 to 50 employees and successful acquisition."
+          }
+        ]
+      }
+    },
+    {
+      "type": "skills",
+      "position": 4,
+      "content": {
+        "skills": ["Executive Leadership", "Strategic Planning", "Team Building", "Budget Management", "Digital Transformation", "Agile", "Cloud Strategy", "Product Development"]
+      }
+    },
+    {
+      "type": "education",
+      "position": 5,
+      "content": {
+        "items": [
+          {
+            "institution": "Harvard Business School",
+            "degree": "MBA",
+            "year": "2008 - 2010"
+          },
+          {
+            "institution": "Stanford University",
+            "degree": "Bachelor of Science in Computer Science",
+            "year": "2004 - 2008"
+          }
+        ]
+      }
+    }
+  ]
+}

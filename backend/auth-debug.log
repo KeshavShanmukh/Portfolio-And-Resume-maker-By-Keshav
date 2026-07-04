@@ -42,3 +42,44 @@ bcryptCompare:true
 [2026-06-19T15:05:14.537Z] Login attempt for: tester_js@example.com userFound: true
 storedPasswordLength: 60
 bcryptCompare:true
+[2026-06-23T16:58:35.579Z] Login attempt for: admin userFound: false
+[2026-06-23T16:58:36.845Z] Login attempt for: admin userFound: false
+[2026-06-23T17:09:22.861Z] Login attempt for: madhavipulikonda17@gmail.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-23T17:09:51.891Z] Login attempt for: madhavipulikonda17@gmail.com userFound: true
+storedPasswordLength: 60
+bcryptCompare:true
+[2026-06-23T17:39:29.387Z] Login attempt for: admin@portfoliomaker.com userFound: true
+storedPasswordLength: 8
+bcryptCompare:false
+[2026-06-23T17:41:26.937Z] Login attempt for: admin@portfoliomaker.com userFound: true
+storedPasswordLength: 8
+plaintextCompare:true
+[2026-06-23T17:41:50.415Z] Login attempt for: demo@portfoliomaker.com userFound: true
+storedPasswordLength: 7
+plaintextCompare:true
+[2026-06-23T17:42:28.233Z] Login attempt for: admin@portfoliomaker.com userFound: true
+storedPasswordLength: 8
+plaintextCompare:true
+[2026-06-23T17:43:14.930Z] Login attempt for: demo@portfoliomaker.com userFound: true
+storedPasswordLength: 7
+plaintextCompare:true
+[2026-06-23T18:00:46.862Z] Login attempt for: tester_js@example.com userFound: false
+[2026-06-23T18:01:58.578Z] Login attempt for: tester_js@example.com userFound: false
+[2026-06-23T18:02:48.100Z] Login attempt for: tester_js@example.com userFound: false
+[2026-06-23T18:04:52.708Z] Login attempt for: demo@portfoliomaker.com userFound: true
+storedPasswordLength: 7
+plaintextCompare:true
+[2026-06-23T18:07:02.750Z] Login attempt for: demo@portfoliomaker.com userFound: true
+storedPasswordLength: 7
+plaintextCompare:true
+[2026-06-25T08:55:20.617Z] Login attempt for: admin@portfoliomaker.com userFound: true
+storedPasswordLength: 8
+plaintextCompare:false
+[2026-06-26T03:10:39.894Z] Login attempt for: admin@portfoliomaker.com userFound: true
+storedPasswordLength: 8
+plaintextCompare:true
+[2026-06-26T03:11:15.085Z] Login attempt for: admin@portfoliomaker.com userFound: true
+storedPasswordLength: 8
+plaintextCompare:true

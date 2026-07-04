@@ -4,6 +4,7 @@ import FormBuilder from '../portfolio/form-builder/FormBuilder'
 import DragBuilder from '../portfolio/drag-builder/DragBuilder'
 import CodeBuilder from '../portfolio/code-builder/CodeBuilder'
 import axios from 'axios'
+import { API_BASE_URL } from '../api/config'
 
 export default function EditPortfolio(){
   const { id, mode } = useParams()
@@ -13,7 +14,7 @@ export default function EditPortfolio(){
   useEffect(()=>{
     (async ()=>{
       try{
-        const res = await axios.get(`http://localhost:4000/api/portfolio/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+        const res = await axios.get(`${API_BASE_URL}/api/portfolio/${id}`, { headers: { Authorization: `Bearer ${token}` } })
         setPortfolio(res.data)
       }catch(e){ console.error(e) }
     })()

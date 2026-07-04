@@ -1,0 +1,49 @@
+{
+  "id": "minimal",
+  "name": "Minimal Portfolio",
+  "description": "Simple and elegant one-page design",
+  "category": "portfolio",
+  "layout": "single-page",
+  "theme": {
+    "primaryColor": "#374151",
+    "secondaryColor": "#1f2937",
+    "backgroundColor": "#ffffff",
+    "textColor": "#111827",
+    "font": "Helvetica, Arial, sans-serif"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "position": 1,
+      "content": {
+        "name": "Sam Minimal",
+        "role": "Developer",
+        "tagline": "Less is more",
+        "image": ""
+      }
+    },
+    {
+      "type": "about",
+      "position": 2,
+      "content": {
+        "description": "I build simple, elegant solutions to complex problems. Focused on clean code and user experience."
+      }
+    },
+    {
+      "type": "skills",
+      "position": 3,
+      "content": {
+        "skills": ["JavaScript", "React", "Node.js", "Design", "Problem Solving"]
+      }
+    },
+    {
+      "type": "contact",
+      "position": 4,
+      "content": {
+        "email": "sam@minimal.com",
+        "linkedin": "https://linkedin.com/in/samminimal",
+        "github": "https://github.com/samminimal"
+      }
+    }
+  ]
+}

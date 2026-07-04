@@ -1,0 +1,71 @@
+{
+  "id": "professional",
+  "name": "Modern Professional Portfolio",
+  "description": "Clean and professional for established professionals",
+  "category": "portfolio",
+  "layout": "standard",
+  "theme": {
+    "primaryColor": "#1e3a8a",
+    "secondaryColor": "#1e40af",
+    "backgroundColor": "#f8fafc",
+    "textColor": "#1f2937",
+    "font": "Georgia, serif"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "position": 1,
+      "content": {
+        "name": "Michael Professional",
+        "role": "Senior Software Engineer",
+        "tagline": "10+ years of experience building scalable solutions",
+        "image": ""
+      }
+    },
+    {
+      "type": "about",
+      "position": 2,
+      "content": {
+        "description": "Experienced software engineer with a proven track record of delivering high-quality solutions. Specialized in distributed systems, cloud architecture, and team leadership."
+      }
+    },
+    {
+      "type": "experience",
+      "position": 3,
+      "content": {
+        "company": "Enterprise Solutions Corp",
+        "role": "Lead Software Engineer",
+        "duration": "2018 - Present",
+        "description": "Leading a team of 10 engineers building enterprise applications"
+      }
+    },
+    {
+      "type": "projects",
+      "position": 4,
+      "content": {
+        "title": "Microservices Architecture",
+        "description": "Designed and implemented a scalable microservices architecture",
+        "github": "https://github.com/michaelpro/microservices",
+        "live": ""
+      }
+    },
+    {
+      "type": "testimonials",
+      "position": 5,
+      "content": {
+        "name": "Sarah Johnson",
+        "role": "CTO at TechStart",
+        "text": "Michael's expertise and leadership were instrumental in our success"
+      }
+    },
+    {
+      "type": "contact",
+      "position": 6,
+      "content": {
+        "email": "michael@professional.com",
+        "linkedin": "https://linkedin.com/in/michaelprofessional",
+        "github": "https://github.com/michaelprofessional"
+      }
+    }
+  ]
+}

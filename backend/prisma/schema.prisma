@@ -9,19 +9,29 @@ datasource db {
 
 
 model User {
-  id        Int      @id @default(autoincrement())
-  username  String
-  email     String   @unique
-  password  String
-  createdAt DateTime @default(now())
-  portfolios Portfolio[]
+  id              Int              @id @default(autoincrement())
+  username        String           @unique
+  email           String           @unique
+  password        String
+  role            String           @default("USER")
+  profileImage    String?
+  createdAt       DateTime         @default(now())
+  portfolios      Portfolio[]
+  contactMessages ContactMessage[]
+  resumes         Resume[]
+  atsReports      ATSReport[]
+  uploadedResumes UploadedResume[]
+  aiHistory       AIHistory[]
+  resumePDFs      ResumePDF[]
 }
+
 model Portfolio {
   id          Int                 @id @default(autoincrement())
   user        User                @relation(fields: [userId], references: [id])
   userId      Int
   title       String
   description String?
+  customSlug  String?             @unique @map("custom_slug")
   builderType String              @default("DRAG_DROP")
   meta        String?
   codeHtml    String?
@@ -29,9 +39,23 @@ model Portfolio {
   codeJs      String?
   theme       String?             @default("default")
   isPublished Boolean             @default(false)
+  hostedUrl   String?
   sections    PortfolioSection[]
   createdAt   DateTime            @default(now())
   updatedAt   DateTime            @updatedAt
+}
+
+model ContactMessage {
+  id              Int      @id @default(autoincrement())
+  portfolioOwnerId Int     @map("portfolio_owner_id")
+  visitorName     String   @map("visitor_name")
+  visitorEmail    String   @map("visitor_email")
+  messageText     String   @map("message_text")
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  portfolioOwner  User     @relation(fields: [portfolioOwnerId], references: [id], onDelete: Cascade)
+
+  @@map("contact_messages")
 }
 
 model PortfolioSection {
@@ -42,4 +66,73 @@ model PortfolioSection {
   position    Int
   content     String
   createdAt   DateTime  @default(now())
+}
+
+model Resume {
+  id          Int            @id @default(autoincrement())
+  user        User           @relation(fields: [userId], references: [id])
+  userId      Int
+  title       String
+  builderType String         @default("FORM")
+  meta        String?
+  theme       String?        @default("default")
+  isPublished Boolean        @default(false)
+  sections    ResumeSection[]
+  atsReports  ATSReport[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model ResumeSection {
+  id          Int       @id @default(autoincrement())
+  resume      Resume    @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  resumeId    Int
+  type        String
+  position    Int
+  content     String
+  createdAt   DateTime  @default(now())
+}
+
+model ATSReport {
+  id              Int      @id @default(autoincrement())
+  user            User     @relation(fields: [userId], references: [id])
+  userId          Int
+  resume          Resume   @relation(fields: [resumeId], references: [id])
+  resumeId        Int
+  score           Int
+  strengths       String
+  weaknesses      String
+  suggestions     String
+  keywords        String?
+  createdAt       DateTime @default(now())
+}
+
+model UploadedResume {
+  id          Int      @id @default(autoincrement())
+  user        User     @relation(fields: [userId], references: [id])
+  userId      Int
+  fileName    String
+  filePath    String
+  extractedData String?
+  createdAt   DateTime @default(now())
+}
+
+model AIHistory {
+  id          Int      @id @default(autoincrement())
+  user        User     @relation(fields: [userId], references: [id])
+  userId      Int
+  prompt      String
+  response    String
+  context     String?
+  createdAt   DateTime @default(now())
+}
+
+model ResumePDF {
+  id          Int      @id @default(autoincrement())
+  user        User     @relation(fields: [userId], references: [id])
+  userId      Int
+  username    String
+  pdfFileName String
+  pdfPath     String
+  createdAt   DateTime @default(now())
 }

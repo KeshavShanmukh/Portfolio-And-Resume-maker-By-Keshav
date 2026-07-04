@@ -1,0 +1,71 @@
+{
+  "id": "student",
+  "name": "Student Portfolio",
+  "description": "Ideal for students and recent graduates",
+  "category": "portfolio",
+  "layout": "standard",
+  "theme": {
+    "primaryColor": "#10b981",
+    "secondaryColor": "#059669",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "font": "Poppins, sans-serif"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "position": 1,
+      "content": {
+        "name": "Jane Student",
+        "role": "Computer Science Student",
+        "tagline": "Aspiring software engineer passionate about learning and creating",
+        "image": ""
+      }
+    },
+    {
+      "type": "education",
+      "position": 2,
+      "content": {
+        "institution": "University of Technology",
+        "degree": "B.S. Computer Science",
+        "year": "2020 - 2024",
+        "gpa": "3.8/4.0"
+      }
+    },
+    {
+      "type": "skills",
+      "position": 3,
+      "content": {
+        "skills": ["Python", "Java", "JavaScript", "HTML/CSS", "SQL", "Git", "Data Structures", "Algorithms"]
+      }
+    },
+    {
+      "type": "projects",
+      "position": 4,
+      "content": {
+        "title": "Course Management System",
+        "description": "Built a web application for managing university courses",
+        "github": "https://github.com/janestudent/cms",
+        "live": ""
+      }
+    },
+    {
+      "type": "certifications",
+      "position": 5,
+      "content": {
+        "name": "AWS Cloud Practitioner",
+        "issuer": "Amazon Web Services",
+        "date": "2023"
+      }
+    },
+    {
+      "type": "contact",
+      "position": 6,
+      "content": {
+        "email": "jane@student.edu",
+        "linkedin": "https://linkedin.com/in/janestudent",
+        "github": "https://github.com/janestudent"
+      }
+    }
+  ]
+}

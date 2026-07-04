@@ -1,0 +1,96 @@
+{
+  "id": "student",
+  "name": "Student Resume",
+  "description": "Education and internship focus",
+  "category": "resume",
+  "layout": "single-column",
+  "theme": {
+    "primaryColor": "#7c3aed",
+    "secondaryColor": "#6d28d9",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "font": "Arial, sans-serif"
+  },
+  "sections": [
+    {
+      "type": "contact",
+      "position": 1,
+      "content": {
+        "name": "Emily Student",
+        "email": "emily@university.edu",
+        "phone": "(555) 234-5678",
+        "location": "Boston, MA",
+        "linkedin": "linkedin.com/in/emilystudent",
+        "github": "github.com/emilystudent"
+      }
+    },
+    {
+      "type": "education",
+      "position": 2,
+      "content": {
+        "items": [
+          {
+            "institution": "Boston University",
+            "degree": "Bachelor of Science in Computer Science",
+            "year": "2020 - 2024",
+            "gpa": "3.9/4.0",
+            "relevantCoursework": "Data Structures, Algorithms, Database Systems, Software Engineering"
+          }
+        ]
+      }
+    },
+    {
+      "type": "skills",
+      "position": 3,
+      "content": {
+        "skills": ["Python", "Java", "JavaScript", "HTML/CSS", "SQL", "Git", "Machine Learning", "Data Analysis"]
+      }
+    },
+    {
+      "type": "experience",
+      "position": 4,
+      "content": {
+        "items": [
+          {
+            "company": "Tech Startup Internship",
+            "role": "Software Engineering Intern",
+            "duration": "Summer 2023",
+            "description": "Developed features for web application using React and Node.js. Participated in code reviews and agile ceremonies."
+          },
+          {
+            "company": "University Research Lab",
+            "role": "Research Assistant",
+            "duration": "2022 - 2023",
+            "description": "Assisted with machine learning research projects. Implemented data preprocessing pipelines."
+          }
+        ]
+      }
+    },
+    {
+      "type": "projects",
+      "position": 5,
+      "content": {
+        "items": [
+          {
+            "name": "Course Planner App",
+            "description": "Built a mobile app for students to plan and track their coursework",
+            "technologies": "React Native, Firebase"
+          }
+        ]
+      }
+    },
+    {
+      "type": "certifications",
+      "position": 6,
+      "content": {
+        "items": [
+          {
+            "name": "AWS Certified Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "2023"
+          }
+        ]
+      }
+    }
+  ]
+}

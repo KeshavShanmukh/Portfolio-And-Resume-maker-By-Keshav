@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { API_BASE_URL } from '../api/config'
 
 export default function PortfolioForm({onChange}){
   const [form, setForm] = useState({
@@ -12,7 +13,7 @@ export default function PortfolioForm({onChange}){
       const token = localStorage.getItem('token')
       if(!token) return
       try{
-        const res = await axios.get('http://localhost:4000/api/portfolio', { headers: { Authorization: `Bearer ${token}` } })
+        const res = await axios.get(`${API_BASE_URL}/api/portfolio`, { headers: { Authorization: `Bearer ${token}` } })
         if(res.data) setForm(res.data)
       }catch(e){/* ignore */}
     }
@@ -31,7 +32,7 @@ export default function PortfolioForm({onChange}){
     const token = localStorage.getItem('token')
     try{
       if(token){
-        await axios.post('http://localhost:4000/api/portfolio', form, { headers: { Authorization: `Bearer ${token}` } })
+        await axios.post(`${API_BASE_URL}/api/portfolio`, form, { headers: { Authorization: `Bearer ${token}` } })
         alert('Portfolio saved to server')
       } else {
         localStorage.setItem('portfolio', JSON.stringify(form))
